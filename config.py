@@ -9,3 +9,5 @@ class Config(object):
         'sqlite:///' + os.path.join(basedir, 'app.db')
     
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+
+    FILEIMPORT = "C:\\Users\\g.derevlev\\Documents\\site1\\app\\data-work.txt"
