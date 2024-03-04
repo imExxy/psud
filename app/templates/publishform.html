@@ -1,0 +1,251 @@
+{% extends "publishpage.html" %}
+
+{% block formp %}
+<div>
+  <h3>Filter</h3>
+  <form action="" method="post" novalidate>
+    {{ formp.hidden_tag() }}
+    <div class="row match-height">
+        <div class="col-xl-4 col-lg-6 col-md-12">
+          <div class="card">
+            <div class="card-header">
+              <h4 class="card-title">{{ formp.p_author.label }}</h4>
+            </div>
+            <div class="card-block">
+              <div class="card-body">
+                <fieldset class="form-group">
+                  <div class="form-control" id="basicInput">
+                    {{ formp.p_author(class_="form-control") }}
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+            <div class="card-header">
+              <h4 class="card-title">{{ formp.p_author_type.label }}</h4>
+            </div>
+            <div class="card-block">
+              <div class="card-body">
+                <fieldset class="form-group form-control" id="basicSelect">
+                  {{ formp.p_author_type(id_="basicSelect", class_="form-group form-control") }}
+                </fieldset>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-6 col-md-12">
+          <div class="card">
+            <div class="card-header">
+              <h4 class="card-title">{{ formp.p_deal_type.label }}</h4>
+            </div>
+            <div class="card-block">
+              <div class="card-body">
+                <fieldset class="form-group">
+                  <div class="form-control" id="basicInput">
+                    {{ formp.p_deal_type(class_="form-control") }}
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+            <div class="card-header">
+              <h4 class="card-title">{{ formp.p_accommodation_type.label }}</h4>
+            </div>
+            <div class="card-block">
+              <div class="card-body">
+                <fieldset class="form-group">
+                  <div class="form-control" id="basicInput">
+                    {{ formp.p_accommodation_type(class_="form-control") }}
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-6 col-md-12">
+          <div class="card">
+            <div class="card-header">
+              <h4 class="card-title">{{ formp.p_commissions.label }}</h4>
+            </div>
+            <div class="card-block">
+              <div class="card-body">
+                <fieldset class="form-group">
+                  <div class="form-control" id="basicInput">
+                    {{ formp.p_commissions(class_="form-control") }}
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+            <div class="card-header">
+              <h4 class="card-title">{{ formp.p_underground.label }}</h4>
+            </div>
+            <div class="card-block">
+              <div class="card-body">
+                <fieldset class="form-group">
+                  <div class="form-control" id="basicInput">
+                    {{ formp.p_underground(class_="form-control") }}
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="row match-height">
+        <div class="col-xl-4 col-lg-6 col-md-12">
+          <div class="card">
+            <div class="card-header">
+              <h4 class="card-title">{{ formp.p_city.label }}</h4>
+            </div>
+            <div class="card-block">
+              <div class="card-body">
+                <fieldset class="form-group">
+                  <div class="form-control" id="basicInput">
+                    {{ formp.p_city(class_="form-control") }}
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+            <div class="card-header">
+              <h4 class="card-title">{{ formp.p_district.label }}</h4>
+            </div>
+            <div class="card-block">
+              <div class="card-body">
+                <fieldset class="form-group">
+                  <div class="form-control" id="basicInput">
+                    {{ formp.p_district(class_="form-control") }}
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-6 col-md-12">
+          <div class="card">
+            <div class="card-header">
+              <h4 class="card-title">{{ formp.p_street.label }}</h4>
+            </div>
+            <div class="card-block">
+              <div class="card-body">
+                <fieldset class="form-group">
+                  <div class="form-control" id="basicInput">
+                    {{ formp.p_street(class_="form-control") }}
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+            <div class="card-header">
+              <h4 class="card-title">{{ formp.p_house_number.label }}</h4>
+            </div>
+            <div class="card-block">
+              <div class="card-body">
+                <fieldset class="form-group">
+                  <div class="form-control" id="basicInput">
+                    {{ formp.p_house_number(class_="form-control") }}
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-6 col-md-12">
+          <div class="card">
+            <div class="row match-height">
+              <div class="col-xl-6 col-lg-9 col-md-18">
+                <div class="card-header">
+                  <h4 class="card-title">{{ formp.p_floor.label }}</h4>
+                </div>
+                <div class="card-block">
+                  <div class="card-body">
+                    <fieldset class="form-group">
+                      <div class="form-control" id="basicInput">
+                        {{ formp.p_floor(class_="form-control") }}
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-6 col-lg-9 col-md-18">
+                <div class="card-header">
+                  <h4 class="card-title">{{ formp.p_floors_count.label }}</h4>
+                </div>
+                <div class="card-block">
+                  <div class="card-body">
+                    <fieldset class="form-group">
+                      <div class="form-control" id="basicInput">
+                        {{ formp.p_floors_count(class_="form-control") }}
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row match-height">
+              <div class="col-xl-6 col-lg-9 col-md-18">
+                <div class="card-header">
+                  <h4 class="card-title">{{ formp.p_total_meters.label }}</h4>
+                </div>
+                <div class="card-block">
+                  <div class="card-body">
+                    <fieldset class="form-group">
+                      <div class="form-control" id="basicInput">
+                        {{ formp.p_total_meters(class_="form-control") }}
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-6 col-lg-9 col-md-18">
+                <div class="card-header">
+                  <h4 class="card-title">{{ formp.p_price_per_month.label }}</h4>
+                </div>
+                <div class="card-block">
+                  <div class="card-body">
+                    <fieldset class="form-group">
+                      <div class="form-control" id="basicInput">
+                        {{ formp.p_price_per_month(class_="form-control") }}
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="row match-height">
+        <div class="col-xl-4 col-lg-6 col-md-12">
+          <div class="card">
+            <div class="card-header">
+              <h4 class="card-title">{{ formp.p_link.label }}</h4>
+            </div>
+            <div class="card-block">
+              <div class="card-body">
+                <fieldset class="form-group">
+                  <div class="form-control" id="basicInput">
+                    {{ formp.p_link(class_="form-control") }}
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-2 col-lg-3 col-md-6">
+          <div class="card">
+            <div class="card-header">
+              <h4 class="card-title">{{ formp.p_rooms_count.label }}</h4>
+            </div>
+            <div class="card-block">
+              <div class="card-body">
+                <fieldset class="form-group">
+                  <div class="form-control" id="basicInput">
+                    {{ formp.p_rooms_count(class_="form-control") }}
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <p>{{ formp.p_submit(class_="btn btn-warning") }}</p>
+  </form>
+</div>
+{% endblock %}

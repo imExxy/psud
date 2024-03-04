@@ -1,0 +1,146 @@
+{% extends "tables.html" %}
+
+{% block form %}
+<div>
+  <h3>Filter</h3>
+    <form action="" method="post" novalidate>
+      {{ form.hidden_tag() }}
+      <div class="row match-height">
+        <div class="col-xl-4 col-lg-6 col-md-12">
+          <div class="card">
+            <div class="card-header">
+              <h4 class="card-title">{{ form.f_rooms.label }}</h4>
+            </div>
+            <div class="card-block">
+              <div class="card-body">
+                <fieldset class="form-group">
+                  <div class="form-control" id="basicInput">
+                    {{ form.f_rooms(class_="form-control") }}
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-6 col-md-12">
+          <div class="card">
+            <div class="card-header">
+              <h4 class="card-title">{{ form.f_district.label }}</h4>
+            </div>
+            <div class="card-block">
+              <div class="card-body">
+                <fieldset class="form-group">
+                  <div class="form-control" id="basicInput">
+                    {{ form.f_district(class_="form-control") }}
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-6 col-md-12">
+          <div class="card">
+            <div class="card-header">
+              <h4 class="card-title">{{ form.f_metro.label }}</h4>
+            </div>
+            <div class="card-block">
+              <div class="card-body">
+                <fieldset class="form-group">
+                  <div class="form-control" id="basicInput">
+                    {{ form.f_metro(class_="form-control") }}
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row match-height">
+        <div class="col-xl-4 col-lg-6 col-md-12">
+          <div class="card">
+            <div class="card-header">
+              <h4 class="card-title">{{ form.f_author_type.label }}</h4>
+            </div>
+            <div class="card-block">
+              <div class="card-body">
+                <fieldset class="form-group form-control" id="basicSelect">
+                  {{ form.f_author_type(id_="basicSelect", class_="form-group form-control") }}
+                </fieldset>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-6 col-md-12">
+          <div class="card">
+            <div class="row match-height">
+              <div class="col-xl-6 col-lg-9 col-md-18">
+                <div class="card-header">
+                  <h4 class="card-title">{{ form.f_area_lower.label }}</h4>
+                </div>
+                <div class="card-block">
+                  <div class="card-body">
+                    <fieldset class="form-group">
+                      <div class="form-control" id="basicInput">
+                        {{ form.f_area_lower(class_="form-control") }}
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-6 col-lg-9 col-md-18">
+                <div class="card-header">
+                  <h4 class="card-title">{{ form.f_area_upper.label }}</h4>
+                </div>
+                <div class="card-block">
+                  <div class="card-body">
+                    <fieldset class="form-group">
+                      <div class="form-control" id="basicInput">
+                        {{ form.f_area_upper(class_="form-control") }}
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-6 col-md-12">
+          <div class="card">
+            <div class="row match-height">
+              <div class="col-xl-6 col-lg-9 col-md-18">
+                <div class="card-header">
+                  <h4 class="card-title">{{ form.f_price_lower.label }}</h4>
+                </div>
+                <div class="card-block">
+                  <div class="card-body">
+                    <fieldset class="form-group">
+                      <div class="form-control" id="basicInput">
+                        {{ form.f_price_lower(class_="form-control") }}
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-6 col-lg-9 col-md-18">
+                <div class="card-header">
+                  <h4 class="card-title">{{ form.f_price_upper.label }}</h4>
+                </div>
+                <div class="card-block">
+                  <div class="card-body">
+                    <fieldset class="form-group">
+                      <div class="form-control" id="basicInput">
+                        {{ form.f_price_upper(class_="form-control") }}
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p>{{ form.f_submit(class_="btn btn-warning") }}</p>
+    </form>
+</div>
+{% endblock %}
+

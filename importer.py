@@ -1,7 +1,8 @@
 from app import app
-from app.models import Power
+from app.models import Power, RealEstate
 from app import db
 from datetime import datetime
+
 import pika
 
 import csv

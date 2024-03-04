@@ -1,0 +1,31 @@
+{% extends "statspage.html" %}
+
+{% block forms1 %}
+<div>
+  <h3>Сортировка</h3>
+  <form action="" method="post" novalidate>
+    {{ forms1.hidden_tag() }}
+    <div class="card-header">
+      <h4 class="card-title">{{ forms1.s1_sort.label }}</h4>
+    </div>
+    <div class="card-block">
+      <div class="card-body">
+        <fieldset class="form-group form-control" id="basicSelect">
+          {{ forms1.s1_sort(id_="basicSelect", class_="form-group form-control") }}
+        </fieldset>
+      </div>
+    </div>
+    <div class="card-header">
+      <h4 class="card-title">{{ forms1.s1_direction.label }}</h4>
+    </div>
+    <div class="card-block">
+      <div class="card-body">
+        <fieldset class="form-group form-control" id="basicSelect">
+          {{ forms1.s1_direction(id_="basicSelect", class_="form-group form-control") }}
+        </fieldset>
+      </div>
+    </div>
+    <p>{{ forms1.s1_sub(class_="btn btn-warning") }}</p>
+  </form>
+</div>
+{% endblock %}
